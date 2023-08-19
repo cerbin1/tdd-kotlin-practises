@@ -1,6 +1,8 @@
 class Game {
-    fun roll(point: Int) {
-        throw IllegalArgumentException()
+    fun roll(points: Int) {
+        if (points < 0) {
+            throw IllegalArgumentException()
+        }
     }
 
 }

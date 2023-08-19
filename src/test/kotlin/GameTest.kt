@@ -13,4 +13,16 @@ class GameTest {
             game.roll(-1);
         }
     }
+
+    @Test
+    fun shouldThrowForNegativePoints() {
+//        given
+        val game = Game();
+
+//        when
+        assertThrows<IllegalArgumentException> {
+            game.roll(-10);
+        }
+    }
+
 }
