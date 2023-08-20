@@ -7,32 +7,32 @@ class GameTest {
     @Test
     fun shouldThrowForNegativeOnePoint() {
 //        given
-        val game = Game();
+        val game = Game()
 
 //        when & then
         assertThrows<IllegalArgumentException> {
-            game.roll(-1);
+            game.roll(-1)
         }
     }
 
     @Test
     fun shouldThrowForNegativePoints() {
 //        given
-        val game = Game();
+        val game = Game()
 
 //        when & then
         assertThrows<IllegalArgumentException> {
-            game.roll(-10);
+            game.roll(-10)
         }
     }
 
     @Test
     fun shouldGetOnePointsInSingleGameWithOnePoint() {
 //        given
-        val game = Game();
+        val game = Game()
 
 //        when
-        game.roll(1);
+        game.roll(1)
 
 //        then
         assertEquals(1, game.getPoints())

@@ -6,6 +6,6 @@ class Game {
     }
 
     fun getPoints(): Int {
-        return 1;
+        return 1
     }
 }
