@@ -35,7 +35,21 @@ class GameTest {
         game.roll(1)
 
 //        then
-        assertEquals(1, game.getPoints())
+        assertEquals(1, game.points)
     }
 
+
+    @Test
+    fun shouldGetPointsCalculatedFromTwoRolls() {
+//        given
+        val game = Game()
+
+//        when
+        game.roll(1)
+        game.roll(1)
+
+//        then
+        assertEquals(2, game.points)
+
+    }
 }

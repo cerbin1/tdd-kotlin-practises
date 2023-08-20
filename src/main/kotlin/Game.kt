@@ -1,11 +1,10 @@
 class Game {
-    fun roll(points: Int) {
-        if (points < 0) {
+    var points: Int = 0
+
+    fun roll(rollPoints: Int) {
+        if (rollPoints < 0) {
             throw IllegalArgumentException()
         }
-    }
-
-    fun getPoints(): Int {
-        return 1
+        points += rollPoints
     }
 }
