@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.assertThrows
 import kotlin.test.Test
+import kotlin.test.assertEquals
 
 class GameTest {
 
@@ -23,6 +24,18 @@ class GameTest {
         assertThrows<IllegalArgumentException> {
             game.roll(-10);
         }
+    }
+
+    @Test
+    fun shouldGetOnePointsInSingleGameWithOnePoint() {
+//        given
+        val game = Game();
+
+//        when
+        game.roll(1);
+
+//        then
+        assertEquals(1, game.getPoints())
     }
 
 }

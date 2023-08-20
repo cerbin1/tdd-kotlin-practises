@@ -5,4 +5,7 @@ class Game {
         }
     }
 
+    fun getPoints(): Int {
+        return 1;
+    }
 }
