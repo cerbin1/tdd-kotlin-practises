@@ -8,7 +8,7 @@ class GameTest {
 //        given
         val game = Game();
 
-//        when
+//        when & then
         assertThrows<IllegalArgumentException> {
             game.roll(-1);
         }
@@ -19,7 +19,7 @@ class GameTest {
 //        given
         val game = Game();
 
-//        when
+//        when & then
         assertThrows<IllegalArgumentException> {
             game.roll(-10);
         }
