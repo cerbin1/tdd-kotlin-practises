@@ -27,7 +27,7 @@ class GameTest {
     }
 
     @Test
-    fun shouldGetOnePointsInSingleGameWithOnePoint() {
+    fun shouldGetOnePointFromOneRoll() {
 //        given
         val game = Game()
 
