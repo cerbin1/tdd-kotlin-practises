@@ -27,6 +27,18 @@ class GameTest {
     }
 
     @Test
+    fun shouldGetNoPointFromOneRollWhenZeroIsRolled() {
+//        given
+        val game = Game()
+
+//        when
+        game.roll(0)
+
+//        then
+        assertEquals(0, game.points)
+    }
+
+    @Test
     fun shouldGetOnePointFromOneRoll() {
 //        given
         val game = Game()
@@ -37,7 +49,6 @@ class GameTest {
 //        then
         assertEquals(1, game.points)
     }
-
 
     @Test
     fun shouldGetPointsCalculatedFromTwoRolls() {
@@ -50,6 +61,7 @@ class GameTest {
 
 //        then
         assertEquals(2, game.points)
-
     }
+
+
 }
