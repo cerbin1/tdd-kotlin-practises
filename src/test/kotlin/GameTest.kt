@@ -144,6 +144,6 @@ class GameTest {
         }
 
 //        then
-        assertEquals(300, game.points)
+        assertEquals(300, game.points) // error, wrong implementation of counting points from strikes
     }
 }
