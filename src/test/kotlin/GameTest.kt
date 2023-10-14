@@ -91,4 +91,59 @@ class GameTest {
         assertEquals(24, game.points)
     }
 
+    @Test
+    fun testCase1() {
+//        given
+        val game = Game()
+
+//        when
+        for (i in 0 until 20) {
+            game.roll(0)
+        }
+
+//        then
+        assertEquals(0, game.points)
+    }
+
+    @Test
+    fun testCase2() {
+//        given
+        val game = Game()
+
+//        when
+        for (i in 0 until 20) {
+            game.roll(1)
+        }
+
+//        then
+        assertEquals(20, game.points)
+    }
+
+    @Test
+    fun testCase3() {
+//        given
+        val game = Game()
+
+//        when
+        game.roll(10)
+        game.roll(10)
+        game.roll(10)
+
+//        then
+        assertEquals(50, game.points)
+    }
+
+    @Test
+    fun testCase4() {
+//        given
+        val game = Game()
+
+//        when
+        for (i in 0 until 12) {
+            game.roll(10)
+        }
+
+//        then
+        assertEquals(300, game.points)
+    }
 }
