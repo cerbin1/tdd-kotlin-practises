@@ -64,7 +64,7 @@ class GameTest {
     }
 
     @Test
-    fun shouldGetPointsFromSecondTurnWhenSpareIsHit() {
+    fun shouldGetDoublePointsWhenSpareIsHitInPreviousRound() {
 //        given
         val game = Game()
 
