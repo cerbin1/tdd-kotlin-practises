@@ -1,9 +1,8 @@
 class Game {
     var points: Int = 0
-    var previousTurnPoints: Int = 0
-//    var turnPoints: Int = 0
-    var rollNumber: Int = 1
-    var bonusPointsMultiplierCount: Int = 0
+    private var previousTurnPoints: Int = 0
+    private var rollNumber: Int = 1
+    private var bonusPointsMultiplierCount: Int = 0
 
     fun roll(rollPoints: Int) {
         if (rollPoints < 0) {
