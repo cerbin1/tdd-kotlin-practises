@@ -77,4 +77,18 @@ class GameTest {
         assertEquals(16, game.points)
     }
 
+    @Test
+    fun shouldGetDoublePointsInNextTwoRollsWhenStrikeIsHitInPreviousRound() {
+//        given
+        val game = Game()
+
+//        when
+        game.roll(10)
+        game.roll(3)
+        game.roll(4)
+
+//        then
+        assertEquals(24, game.points)
+    }
+
 }

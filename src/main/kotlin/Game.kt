@@ -16,6 +16,12 @@ class Game {
         }
         turnPoints = rollPoints
 
+        if (isFirstRoll() && points == 10) {
+            bonus += 2
+            turnPoints = 0
+            previousTurnPoints = 0
+        }
+
         if (isSecondRoll()) {
             if (isSpare()) {
                 bonus++
@@ -28,7 +34,9 @@ class Game {
         rollNumber++
     }
 
+    private fun isFirstRoll() = rollNumber % 2 == 1
+
     private fun isSpare() = turnPoints + previousTurnPoints == 10
 
-    private fun isSecondRoll() = rollNumber % 2 == 0
+    private fun isSecondRoll() = !isFirstRoll()
 }
