@@ -63,5 +63,18 @@ class GameTest {
         assertEquals(2, game.points)
     }
 
+    @Test
+    fun shouldGetPointsFromSecondTurnWhenSpareIsHit() {
+//        given
+        val game = Game()
+
+//        when
+        game.roll(5)
+        game.roll(5)
+        game.roll(3)
+
+//        then
+        assertEquals(16, game.points)
+    }
 
 }
